@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = prompt("Bạn cần bao nhiêu số");
+    let result=[];
+    result.push(Math.floor(Math.random()*100));
+    let index=0;
+    let max=0;
+    num=parseInt(num);
+    for (let i = 1; i < num; ) {
+        a=(Math.floor(Math.random()*100));
+        if(result.indexOf(a)==-1){
+            result.push(a);
+            i++
+        }
+    }
+    for (let i = 0; i < result.length; i++) {
+        if(result[i]>max){
+            max=result[i];
+            index=i;
+        }
+    }alert("Số lớn nhất là "+max+" Phần tử số "+index);
+
+</script>
+</body>
+</html>

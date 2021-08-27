@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = prompt("Bạn cần bao nhiêu số");
+    let result=[];
+    num=parseInt(num);
+    for (let i = 0; i < num; i++) {
+        result.push(Math.floor(Math.random()*40));
+    }
+    let v=prompt("nhập số muốn đoán");
+    v=parseInt(v);
+    for (let i = 0; i < result.length; i++) {
+        if(result[i]==v){
+            alert("Bạn đoán đúng rồi");
+            break;
+        }else{
+            if(i==result.length-1){
+                alert("v không có trong mảng");
+            }
+        }
+    }
+</script>
+</body>
+</html>

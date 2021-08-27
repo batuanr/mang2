@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div.a{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+      <h2>Type anything slowly</h2>
+        <form name="f">
+            <textarea name="text" cols="40" rows="10" onkeydown="tex();" ></textarea>
+        </form>
+    </div>
+    <script>
+        let a=['T','Ô','I'," ",'L','À',' ','M','Ộ','T',' ','T','H','I','Ê','N'," ",'T','À','I',' ','!']
+        let n="";
+        function tex() {
+            // lấy giá trị từ form f
+            let text = document.f.text.value;
+            let j = text.length;
+            if(j>0){
+                for (let i = 0; i < j; i++) {
+                    n+=a[i];
+                    if(i===a.length){
+                        document.f.text.value="";
+                        n="";
+                    }
+                }
+            }document.f.text.value=n;
+            n="";
+            // settime 1 mili giây
+            setTimeout("tex()",1);
+        }
+    </script>
+</body>
+</html>

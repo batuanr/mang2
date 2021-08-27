@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array=["c","s","c","2","6","7"]
+    let first=0;
+    let last=array.length-1;
+    for (let i = 0; i < array.length; i++) {
+        if(first<last){
+            a=array[first]
+            array[first]=array[last];
+            array[last]=a;
+            first++;
+            last--;
+        }
+    }
+    let result="";
+    for (let i = 0; i < array.length; i++) {
+        result+=array[i];
+    }
+    document.write(result);
+</script>
+</body>
+</html>

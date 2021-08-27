@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let ta=["one","two","three"];
+    let tv=["một","hai","ba"]
+    function check() {
+        let text=prompt("Nhập từ cần tra");
+        for (let i = 0; i < ta.length; i++) {
+            if(ta[i]==text) return i;
+        }return -1;
+    }
+    function tran(){
+        let i=check()
+        if(i==-1){
+            alert("Không tìm thấy");
+        }
+        else{
+            alert("tv sẽ là "+tv[i]);
+        }
+    }tran()
+</script>
+</body>
+</html>

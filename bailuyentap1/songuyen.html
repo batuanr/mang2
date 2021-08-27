@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let num = prompt("Bạn cần bao nhiêu số");
+  let result=[];
+  let index=0;
+  num=parseInt(num);
+  for (let i = 0; i < num; i++) {
+      result.push(Math.floor(Math.random()*100));
+  }
+  for (let i = 0; i < result.length; i++) {
+      if(result[i]>=10){
+          document.write(result[i]+"<br>");
+          index++;
+      }
+  }document.write("Có "+index+" số lớn hơn hoặc bằng 10");
+</script>
+</body>
+</html>

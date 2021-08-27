@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  let num = prompt("Bạn cần bao nhiêu số");
+  let result=[];
+
+  num=parseInt(num);
+  for (let i = 0; i < num; i++) {
+    result.push(Math.floor(Math.random()*100));
+  }
+  document.write("Chuỗi vào: "+result+"<br>");
+  let first=0;
+  let last=result.length-1;
+  for (let i = 0; i < result.length/2; i++) {
+      if(first<last){
+          a=result[first];
+          result[first]=result[last];
+          result[last]=a;
+          first++;
+          last--;
+      }
+  }document.write("Chuỗi đảo ngược; "+result);
+</script>
+</body>
+</html>
