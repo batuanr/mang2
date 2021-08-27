@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str1="chuoi1";
+    let str2="chuoi2";
+    if(str1.length==str2.length){
+        function check() {
+            for (let i = 0; i < str2.length; i++) {
+                if (str1[i]!=str2[i]){
+                    return false;
+                }
+            }return true;
+        }
+        if(check()){
+            alert("giống");
+        }else{
+            alert("Không giống")
+        }
+    }else{
+        alert("không giống nhau")
+    }
+</script>
+</body>
+</html>
